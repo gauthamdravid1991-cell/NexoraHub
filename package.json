@@ -1,0 +1,21 @@
+{
+  "name": "nexora",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NEXORA search, AI chat, and programming assistant with a secure Groq backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0"
+  }
+}

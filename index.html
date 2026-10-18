@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d1c">
+  <meta name="description" content="NEXORA — search, learn, and build with AI.">
+  <title>NEXORA — Search Beyond</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" data-page="home" aria-label="NEXORA home"><span class="brand-mark">N</span><span>NEXORA</span></a>
+    <nav aria-label="Main navigation">
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="search">Search</button>
+      <button class="nav-link" data-page="chat">AI Chat</button>
+      <button class="nav-link" data-page="code">Programming</button>
+    </nav>
+    <span class="status"><i></i> SYSTEM ONLINE</span>
+  </header>
+
+  <main>
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="eyebrow"><span class="pulse"></span> YOUR GATEWAY TO KNOWLEDGE</div>
+        <h1>Enter the world<br>of <span class="gradient-text">NEXORA.</span></h1>
+        <p class="hero-copy">Search the web. Explore ideas. Build what you imagine.<br>One space for curiosity and creation.</p>
+        <form class="searchbar home-search" id="home-search-form">
+          <span class="search-icon">⌕</span>
+          <input id="home-query" type="search" placeholder="What do you want to discover?" aria-label="Search the web" required>
+          <button class="primary-button" type="submit">Explore <span>↗</span></button>
+        </form>
+        <div class="quick-label">START EXPLORING</div>
+        <div class="feature-grid">
+          <button class="feature-card" data-page="search"><span class="feature-icon cyan">⌕</span><strong>Search Engine</strong><span>Find useful pages and information across the web.</span><b>Explore search ↗</b></button>
+          <button class="feature-card" data-page="chat"><span class="feature-icon violet">✳</span><strong>AI Companion</strong><span>Ask questions and learn complicated topics simply.</span><b>Start a conversation ↗</b></button>
+          <button class="feature-card" data-page="code"><span class="feature-icon green">&lt;/&gt;</span><strong>Programming Lab</strong><span>Understand code, solve bugs, and plan projects.</span><b>Open the lab ↗</b></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page tool-page" id="page-search">
+      <div class="section-heading"><div class="eyebrow">01 / DISCOVER</div><h2>Search <span class="gradient-text">without limits.</span></h2><p>Search the web and open sources to learn more.</p></div>
+      <form class="searchbar" id="search-form"><span class="search-icon">⌕</span><input id="search-query" type="search" placeholder="Search anything..." required><button class="primary-button" type="submit">Search ↗</button></form>
+      <div class="web-shortcuts"><span>Also search with:</span><a id="google-link" href="https://www.google.com/" target="_blank" rel="noopener">Google ↗</a><a id="ddg-link" href="https://duckduckgo.com/" target="_blank" rel="noopener">DuckDuckGo ↗</a></div>
+      <div id="search-status" class="status-message" aria-live="polite"></div><div id="search-results" class="results-list"></div>
+    </section>
+
+    <section class="page tool-page" id="page-chat">
+      <div class="section-heading"><div class="eyebrow">02 / UNDERSTAND</div><h2>Your AI <span class="gradient-text">companion.</span></h2><p>Ask questions, brainstorm, or learn something new.</p></div>
+      <div class="chat-panel"><div id="chat-messages" class="chat-messages" aria-live="polite"><div class="message assistant"><span class="message-label">NEXORA AI</span><p>Hey! I'm ready to help. What are you curious about today?</p></div></div>
+        <form id="chat-form" class="composer"><textarea id="chat-input" rows="2" placeholder="Ask NEXORA anything..." required></textarea><button class="primary-button send-button" type="submit">Send ↗</button></form><div class="privacy-note">AI responses can make mistakes. Check important information with reliable sources.</div>
+      </div>
+    </section>
+
+    <section class="page tool-page" id="page-code">
+      <div class="section-heading"><div class="eyebrow">03 / CREATE</div><h2>Programming <span class="gradient-text">lab.</span></h2><p>Explain code, debug errors, and plan your next project.</p></div>
+      <div class="code-panel"><div class="panel-top"><span><i class="window-dot"></i><i class="window-dot"></i><i class="window-dot"></i> NEXORA / ASSISTANT</span><span class="panel-tag">AI-POWERED</span></div>
+        <form id="code-form" class="code-form"><label for="code-language">LANGUAGE / TECHNOLOGY</label><select id="code-language"><option>JavaScript</option><option>Python</option><option>C++</option><option>C</option><option>C#</option><option>HTML / CSS</option><option>Arduino / ESP32</option><option>Java</option><option>SQL</option><option>Other</option></select><label for="code-prompt">WHAT ARE WE BUILDING OR FIXING?</label><textarea id="code-prompt" rows="6" placeholder="Describe your project, paste an error, or explain what you want your code to do..." required></textarea><button class="primary-button" type="submit">Ask Programming AI ↗</button></form>
+        <div id="code-status" class="status-message" aria-live="polite"></div><div id="code-result" class="ai-result"></div>
+      </div>
+      <p class="small-note">Safety note: this version explains and generates code but does not execute programs on the server.</p>
+    </section>
+  </main>
+  <footer><span class="brand-small">NEXORA</span><span>Search beyond. Think further. Build boldly.</span><span>Made for curious minds.</span></footer>
+  <script src="/app.js" defer></script>
+</body>
+</html>
